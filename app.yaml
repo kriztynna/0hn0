@@ -1,0 +1,15 @@
+application: 0hn0
+version: 1
+
+handlers:
+- url: /css
+  static_dir: css
+- url: /fonts
+  static_dir: fonts
+- url: /img
+  static_dir: img
+- url: /js
+  static_dir: js
+- url: /.*
+  static_files: index.html
+  upload: index\.html
