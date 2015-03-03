@@ -1,5 +1,8 @@
-application: 0hn0
+application: app-ay-n0
 version: 1
+runtime: python27
+api_version: 1
+threadsafe: no
 
 handlers:
 - url: /css

@@ -5,23 +5,25 @@
  * http://q42.com | @q42
  * Written by Martin Kool
  * martin@q42.nl | @mrtnkl
+ * Adaptado por kriztynna
+ * @kriztynna
  */
 var TutorialMessages = [
   //{ msg: 'Welcome to 0h n0. Tap any tile to continue...', tiles: [], next: true },
-  { msg: 'Blue dots can see others <br>in their own row and column <span id="nextdot"></span>', tiles: [], next: true },
-  { msg: 'Their numbers tell how many <span id="nextdot"></span>', tiles: [], next: true },
+  { msg: 'Los puntos azules pueden <br>ver a los demás en su <br>propria fila y columna <span id="nextdot"></span>', tiles: [], next: true },
+  { msg: 'Sus números dicen cuánto ven <span id="nextdot"></span>', tiles: [], next: true },
 
   //{ msg: 'Blue dots can see others. But red dots block their view! <span id="nextdot" class="red"></span>', tiles: [ ], next: true },
-  { msg: 'But red dots block their view! <span id="nextdot" class="red"></span>', tiles: [ ], next: true },
+  { msg: '¡Pero los puntos rojos <br>les bloquean la vista! <span id="nextdot" class="red"></span>', tiles: [ ], next: true },
 
-  { msg: 'So this 2 can only see <br>dots on the right <span id="nextdot"></span>', tiles: [ [0,0] ], next: true },
-  { msg: 'Two dots. These.<br>Tap to make them blue <span id="nextdot"></span>', tiles: [ [1,0,2],[2,0,2] ] },
-  { msg: 'Now close its path.<br>Tap twice for a red dot <span id="nextdot" class="red"></span>', tiles: [ /*[0,0],[1,0],[2,0],*/[3,0,1] ] },
-  { msg: 'This 1 should see only one.<br>It already does - below! <span id="nextdot"></span>', tiles: [ [3,1] ], next: true },
-  { msg: 'So its other path can be closed. Go ahead... <span id="nextdot" class="red"></span>', tiles: [ [2,1,1] ] },
-  { msg: 'This 3 can\'t see left or right.<br>But it does see a dot above <span id="nextdot"></span>', tiles: [ [1,1] ], next: true },
-  { msg: 'To make it see three dots <br>it needs two more... <span id="nextdot"></span>', tiles: [ [1,2,2],[1,3,2] ] },
-  { msg: 'Can you fill out the remaining dots? <span id="nextdot" class="red"></span>', tiles: [ [0,2,1],[2,2,2],[2,3,1] ] },
+  { msg: 'Así que este 2 solo puede ver <br>los puntos a su derecha <span id="nextdot"></span>', tiles: [ [0,0] ], next: true },
+  { msg: 'Dos puntos. Éstos.<br>Pulsa para pintarlos de azul <span id="nextdot"></span>', tiles: [ [1,0,2],[2,0,2] ] },
+  { msg: 'Ahora ciérrale el paso.<br>Pulsa dos veces para pintarlo rojo <span id="nextdot" class="red"></span>', tiles: [ /*[0,0],[1,0],[2,0],*/[3,0,1] ] },
+  { msg: 'Este 1 debería ver solo un punto.<br>Y ya lo ve - debajo <span id="nextdot"></span>', tiles: [ [3,1] ], next: true },
+  { msg: 'Así pues cerramos su otro camino. Adelante... <span id="nextdot" class="red"></span>', tiles: [ [2,1,1] ] },
+  { msg: 'Este 3 no ve para la derecha ni para la izquierda. Pero sí puede ver un punto hacia arriba <span id="nextdot"></span>', tiles: [ [1,1] ], next: true },
+  { msg: 'Para hacerlo ver tres puntos <br>hacen falta dos más... <span id="nextdot"></span>', tiles: [ [1,2,2],[1,3,2] ] },
+  { msg: '¿Puedes tú rellenar los que faltan? <span id="nextdot" class="red"></span>', tiles: [ [0,2,1],[2,2,2],[2,3,1] ] },
   
   { msg: '', tiles: [], last: true }
 ]

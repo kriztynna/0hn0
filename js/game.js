@@ -21,7 +21,7 @@ var Game = new (function() {
       lastSize = 0,
       currentPuzzle = null,
       checkTOH = 0,
-      ojoos = ['Wonderful','Spectacular','Marvelous','Outstanding','Remarkable','Shazam','Impressive','Great','Well done','Fabulous','Clever','Dazzling','Fantastic','Excellent','Nice','Super','Awesome','Ojoo','Brilliant','Splendid','Exceptional','Magnificent','Yay'],
+      ojoos = ['Wepa', 'Dale', 'Echa', 'Olé', 'Anda', 'Arriba', 'Fantástico', 'Increíble', 'Brutal', 'Magnífico', 'Espectacular'],
       remainingOjoos = [],
       endGameTOH1,
       endGameTOH2,
@@ -37,7 +37,7 @@ var Game = new (function() {
       systemTilesLockShown = false,
       time = 0,
       timerTOH = 0,
-      shareMsg = '#0hn0 It\'s 0h h1\'s companion! Go get addicted to this lovely puzzle game http://0hn0.com (or get the app)!';
+      shareMsg = '¡#Ayn0 Es el amigo hispanoparlante de 0hn0! Ve y juega con esta encantadora adaptación http://app-ay-n0.appspot.com.';
 
   function init() {
     var testDebugSize = document.location.hash.replace(/#/g,'') * 1;
@@ -80,7 +80,7 @@ var Game = new (function() {
     // aa3388, 2277cc
 
     //Utils.setColorScheme('#c0cd31');
-    Utils.setColorScheme('#ff384b', '#1cc0e0');
+    Utils.setColorScheme('#ff384b', '#1cc0e0'); // these are the colors of the dots
     if (window.SocialSharing)
       addNativeSocialHooks();
   }
@@ -265,7 +265,7 @@ var Game = new (function() {
     onHomeScreen = false;
     inText = false;
     showGame();
-    $('#boardsize').html('<span>Select a size</span>');
+    $('#boardsize').html('<span>¿Cuántos?</span>');
     $('#menugrid').removeClass('hidden');
     $('#board').addClass('hidden');
     $('#bar [data-action]').not('[data-action="back"]').hide();
@@ -406,7 +406,7 @@ var Game = new (function() {
       grid.hint.active = false;
       Tutorial.end();
       systemTilesLockToggleable = false;
-      var ojoo = getOjoo() + '!';
+      var ojoo = '¡' + getOjoo() + '!';
       $('#boardsize').html('<span>' + ojoo + '</span>');
       grid.each(function() { this.system = true; });
       $('#bar [data-action]').hide();
@@ -842,9 +842,9 @@ var Game = new (function() {
         return;
       }
       if (!undone)
-        grid.hint.show('That\'s the undo button.');
+        grid.hint.show('Ese es el botón para deshacer.');
       else
-        grid.hint.show('Nothing to undo.');
+        grid.hint.show('Nada que deshacer.');
       return;
     }
     var undoState = undoStack.pop(),
@@ -857,10 +857,10 @@ var Game = new (function() {
       tile.clear();
     }
     tile.mark();
-    var s = 'This tile was reversed to ';
-    if (value == 1) s += 'purple.';
-    if (value == 2) s += 'green.';
-    if (value == 0) s += 'its empty state.'
+    var s = 'Este mosaico ha sido revertido a ';
+    if (value == 1) s += 'rojo.';
+    if (value == 2) s += 'azul.';
+    if (value == 0) s += 'su estado en blanco.'
     grid.hint.show(s);
     undone = true;
     clearTimeout(checkTOH);
@@ -876,7 +876,7 @@ var Game = new (function() {
 
   function updateTweetUrl(size) {
     getScore(function(value){
-      var msg = '#0hn0 It\'s 0h h1\'s companion! I just completed a ' + size + ' x ' + size + ' puzzle and my score is ' + value + '. http://0hn0.com (or get the App) ',
+      var msg = '#Ayn0 ¡Es el amigo hispano parlante de 0hn0! Acabo de completar un juego ' + size + ' x ' + size + ' y saqué ' + value + ' puntos. http://app-ay-n0.appspot.com ',
       //var msg = '#0hn0 I just completed a ' + size + ' x ' + size + ' puzzle and my score is ' + value + '. http://0hn0.com (or get the App!) ',
           url = 'https://twitter.com/share?text=' + encodeURIComponent(msg);
       shareMsg = msg;

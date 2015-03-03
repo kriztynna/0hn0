@@ -7,20 +7,20 @@
  * martin@q42.nl | @mrtnkl
  */
 var HintType = {
-  None: 'None',
+  None: 'Nada',
   NumberCanBeEntered:       'NumberCanBeEntered',
-  OneDirectionLeft:         'Only one direction remains for this number to look in <span id="nextdot"></span>',
-  ValueReached:             'This number can see all its dots <span id="nextdot" class="red"></span>',
-  WouldExceed:              'Looking further in one direction would exceed this number <span id="nextdot" class="red"></span>',
-  OneDirectionRequired:     'One specific dot is included <br>in all solutions imaginable <span id="nextdot"></span>',
-  MustBeWall:               'This one should be easy... <span id="nextdot" class="red"></span>',
+  OneDirectionLeft:         'A este número le queda solo una dirección hacia donde mirar <span id="nextdot"></span>',
+  ValueReached:             'Este número ya ve todos sus puntos <span id="nextdot" class="red"></span>',
+  WouldExceed:              'Este número se va a exceder si sigue mirando más allá en cierta dirección <span id="nextdot" class="red"></span>',
+  OneDirectionRequired:     'Hay un punto que es necesario para <br>cualquier solución imaginable <span id="nextdot"></span>',
+  MustBeWall:               'Éste debería ser fácil... <span id="nextdot" class="red"></span>',
 
-  ErrorClosedTooEarly:      'This number can\'t see enough <span id="nextdot"></span>', 
-  ErrorClosedTooLate:       'This number sees a bit too much <span id="nextdot" class="red"></span>', 
-  Error:                    'This one doesn\'t seem right <span id="nextdot" class="red"></span>',
-  Errors:                   'These don\'t seem right <span id="nextdot" class="red"></span>',
-  LockedIn:                 'A blue dot should always see at least one other <span id="nextdot"></span>',
-  GameContinued:            'You can now continue<br>your previous game <span id="nextdot"></span>'
+  ErrorClosedTooEarly:      'Este número no ve suficiente <span id="nextdot"></span>', 
+  ErrorClosedTooLate:       'Este número ve demasiado <span id="nextdot" class="red"></span>', 
+  Error:                    'Éste no se ve bien <span id="nextdot" class="red"></span>',
+  Errors:                   'Éstos no se ven bien <span id="nextdot" class="red"></span>',
+  LockedIn:                 'Un punto azul siempre debería ver al menos uno más <span id="nextdot"></span>',
+  GameContinued:            'Ahora puedes continuar el<br>juego que habías comenzado <span id="nextdot"></span>'
 };
 
 function Hint(grid) {
